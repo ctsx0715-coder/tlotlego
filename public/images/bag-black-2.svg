@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2420"/><stop offset="1" stop-color="#15110f"/></linearGradient>
+  <radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.28"/></radialGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  
+  <filter id="g1" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0"/>
+  </filter>
+  <filter id="g2" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.32 0"/>
+  </filter>
+  <filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="26"/></filter>
+</defs>
+<rect width="1200" height="1500" fill="url(#bg)"/>
+<rect width="1200" height="1500" filter="url(#g1)"/>
+
+  <ellipse cx="600" cy="1230" rx="360" ry="46" fill="#000" opacity="0.28" filter="url(#blur)"/>
+  <g transform="rotate(0 600 800)">
+    <path d="M430 610 C430 330 770 330 770 610" fill="none" stroke="#0f0d0c" stroke-width="34" stroke-linecap="round"/>
+    <path d="M430 610 C430 350 770 350 770 610" fill="none" stroke="#3a3532" stroke-width="6" opacity="0.5" stroke-linecap="round"/>
+    <path d="M330 590 L870 590 L920 1180 Q920 1215 885 1215 L315 1215 Q280 1215 280 1180 Z" fill="#1f1c1a"/>
+    <path d="M330 590 L870 590 L880 700 L320 700 Z" fill="#3a3532" opacity="0.22"/>
+    <path d="M280 1180 Q280 1215 315 1215 L885 1215 Q920 1215 920 1180 L925 1120 L275 1120 Z" fill="#0f0d0c" opacity="0.35"/>
+    <rect x="330" y="590" width="540" height="625" fill="url(#sheen)" opacity="0.6" transform="skewX(-3)"/>
+    <path d="M330 590 L870 590 L840 860 Q600 940 360 860 Z" fill="#0f0d0c" opacity="0.55"/><circle cx="600" cy="880" r="20" fill="#d8b56f"/><circle cx="600" cy="880" r="10" fill="#8a6a2c"/>
+    <path d="M350 640 L850 640 L890 1160 L310 1160 Z" fill="none" stroke="#e8d3ab" stroke-width="3" stroke-dasharray="11 9" stroke-linecap="round" opacity="0.75"/>
+    <circle cx="470" cy="590" r="12" fill="#d8b56f"/><circle cx="730" cy="590" r="12" fill="#d8b56f"/>
+  </g>
+<rect width="1200" height="1500" fill="url(#vig)"/>
+</svg>
